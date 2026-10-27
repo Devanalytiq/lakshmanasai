@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karumuri Lakshmana Sai | AI &amp; Data Engineer</title>
+<meta name="description" content="Portfolio of Karumuri Lakshmana Sai — AI &amp; Data Science engineer specializing in ETL pipelines, REST APIs, machine learning and cloud data engineering on Azure &amp; AWS.">
+<meta name="keywords" content="Lakshmana Sai, AI Engineer, Data Engineer, Python Developer, Azure, Machine Learning, Data Science, Portfolio">
+<meta name="author" content="Karumuri Lakshmana Sai">
+<meta name="theme-color" content="#05060a">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Karumuri Lakshmana Sai | AI &amp; Data Engineer">
+<meta property="og:description" content="B.Tech AI &amp; Data Science graduate building data pipelines, REST APIs and ML systems.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/images/og-cover.svg">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="manifest" href="manifest.json">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&amp;family=Sora:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- ===================== LOADER ===================== -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-ring"></div>
+    <div class="loader-glyph">
+      <span>K</span><span>L</span><span>S</span>
+    </div>
+    <div class="loader-progress">
+      <div class="loader-bar" id="loaderBar"></div>
+    </div>
+    <p class="loader-text">INITIALIZING PORTFOLIO<span class="dots">...</span></p>
+  </div>
+</div>
+
+<!-- ===================== CUSTOM CURSOR ===================== -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ===================== PARTICLE / NOISE OVERLAY ===================== -->
+<canvas id="particleCanvas" aria-hidden="true"></canvas>
+<div class="noise-overlay" aria-hidden="true"></div>
+<div class="scanlines" aria-hidden="true"></div>
+
+<!-- ===================== NAV ===================== -->
+<header class="site-header" id="siteHeader">
+  <nav class="navbar" aria-label="Primary">
+    <a href="#hero" class="logo magnetic">
+      <span class="logo-bracket">&lt;</span>KLS<span class="logo-bracket">/&gt;</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link"><span class="nav-index">01</span>About</a></li>
+      <li><a href="#skills" class="nav-link"><span class="nav-index">02</span>Skills</a></li>
+      <li><a href="#experience" class="nav-link"><span class="nav-index">03</span>Experience</a></li>
+      <li><a href="#projects" class="nav-link"><span class="nav-index">04</span>Projects</a></li>
+      <li><a href="#services" class="nav-link"><span class="nav-index">05</span>Services</a></li>
+      <li><a href="#contact" class="nav-link"><span class="nav-index">06</span>Contact</a></li>
+    </ul>
+    <a href="assets/resume.pdf" download class="btn btn-ghost nav-cta magnetic">
+      <i class="fa-solid fa-file-arrow-down"></i> Resume
+    </a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+
+    <div class="hero-content container">
+      <p class="hero-eyebrow reveal-line"><span class="pulse-dot"></span> Available for Opportunities · Gudivada, AP, India</p>
+      <h1 class="hero-title">
+        <span class="reveal-word">Karumuri</span>
+        <span class="reveal-word">Lakshmana</span>
+        <span class="reveal-word gradient-text">Sai</span>
+      </h1>
+      <h2 class="hero-subtitle reveal-line">
+        <span class="typewriter" id="typewriter"></span><span class="caret">|</span>
+      </h2>
+      <p class="hero-desc reveal-line">
+        B.Tech graduate in Artificial Intelligence &amp; Data Science engineering resilient data pipelines,
+        production REST APIs, and machine learning systems — fluent in Python, SQL, Azure &amp; AWS.
+      </p>
+      <div class="hero-cta reveal-line">
+        <a href="#projects" class="btn btn-primary magnetic"><span>View Projects</span><i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-outline magnetic"><span>Get In Touch</span></a>
+      </div>
+      <div class="hero-socials reveal-line">
+        <a href="https://github.com/lakshmanasai5421/" target="_blank" rel="noopener" class="social-icon magnetic" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/lakshmana-sai-/" target="_blank" rel="noopener" class="social-icon magnetic" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:lakshmanasai21@gmail.com" class="social-icon magnetic" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="tel:+919398175790" class="social-icon magnetic" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>SCROLL</span>
+      <div class="scroll-line"><div class="scroll-dot"></div></div>
+    </div>
+  </section>
+
+  <!-- ===================== STATISTICS ===================== -->
+  <section class="stats-strip">
+    <div class="container stats-grid">
+      <div class="stat-card glass-card">
+        <span class="stat-number" data-target="20">0</span><span class="stat-suffix">%</span>
+        <p>Reliability Improved via REST APIs</p>
+      </div>
+      <div class="stat-card glass-card">
+        <span class="stat-number" data-target="25">0</span><span class="stat-suffix">%</span>
+        <p>Latency Reduced on Data Endpoints</p>
+      </div>
+      <div class="stat-card glass-card">
+        <span class="stat-number" data-target="2">0</span><span class="stat-suffix">+</span>
+        <p>Azure Certifications</p>
+      </div>
+      <div class="stat-card glass-card">
+        <span class="stat-number" data-target="2">0</span><span class="stat-suffix">+</span>
+        <p>End-to-End Data &amp; AI Projects</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag reveal-line"><i class="fa-solid fa-user-astronaut"></i> 01 — About Me</span>
+        <h2 class="section-title reveal-line">The Engineer <span class="gradient-text">Behind the Code</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-visual" data-tilt>
+          <div class="about-card glass-card">
+            <div class="about-orbit" aria-hidden="true">
+              <div class="orbit-ring ring-1"></div>
+              <div class="orbit-ring ring-2"></div>
+              <div class="orbit-ring ring-3"></div>
+              <i class="fa-brands fa-python orbit-icon icon-1"></i>
+              <i class="fa-solid fa-database orbit-icon icon-2"></i>
+              <i class="fa-brands fa-aws orbit-icon icon-3"></i>
+              <i class="fa-brands fa-microsoft orbit-icon icon-4"></i>
+              <i class="fa-solid fa-diagram-project orbit-icon icon-5"></i>
+              <i class="fa-solid fa-brain orbit-icon icon-6"></i>
+              <div class="orbit-core"><span>AI/DS</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <p class="reveal-line">
+            I'm a <strong>B.Tech graduate in Artificial Intelligence and Data Science</strong> from
+            VKR VNB &amp; AGK College of Engineering with hands-on experience building
+            <strong>ETL data pipelines</strong>, <strong>REST APIs</strong>, and applying
+            machine learning to real-world healthcare and conversational-AI problems.
+          </p>
+          <p class="reveal-line">
+            I translate ambiguous business requirements into shipped, reliable systems —
+            collaborating across cross-functional engineering teams, optimizing production
+            data endpoints, and orchestrating automated pipelines with Airflow and Azure Data Factory.
+          </p>
+          <p class="reveal-line">
+            I'm eager to contribute to internal initiatives, work with global teams, and grow
+            through mentorship inside a collaborative, high-performing engineering culture.
+          </p>
+
+          <div class="about-info-grid reveal-line">
+            <div class="info-item"><i class="fa-solid fa-graduation-cap"></i><div><span>Degree</span><p>B.Tech, AI &amp; Data Science</p></div></div>
+            <div class="info-item"><i class="fa-solid fa-location-dot"></i><div><span>Location</span><p>Gudivada, Andhra Pradesh</p></div></div>
+            <div class="info-item"><i class="fa-solid fa-envelope"></i><div><span>Email</span><p>lakshmanasai21@gmail.com</p></div></div>
+            <div class="info-item"><i class="fa-solid fa-phone"></i><div><span>Phone</span><p>+91 9398175790</p></div></div>
+          </div>
+
+          <a href="assets/resume.pdf" download class="btn btn-primary magnetic reveal-line">
+            <span>Download Full Resume</span><i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag reveal-line"><i class="fa-solid fa-layer-group"></i> 02 — Skills</span>
+        <h2 class="section-title reveal-line">Tools of the <span class="gradient-text">Trade</span></h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category glass-card reveal-up">
+          <div class="skill-cat-head"><i class="fa-solid fa-code"></i><h3>Programming Languages</h3></div>
+          <div class="skill-bar-item"><div class="skill-bar-top"><span>Python</span><span>95%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="95"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-top"><span>SQL</span><span>90%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-top"><span>Scala</span><span>65%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="65"></div></div></div>
+        </div>
+
+        <div class="skill-category glass-card reveal-up">
+          <div class="skill-cat-head"><i class="fa-solid fa-diagram-project"></i><h3>Data Engineering</h3></div>
+          <div class="skill-bar-item"><div class="skill-bar-top"><span>ETL Development</span><span>92%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="92"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-top"><span>Schema Validation</span><span>88%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-top"><span>Dimensional Modeling</span><span>85%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-top"><span>Data Reconciliation</span><span>87%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="87"></div></div></div>
+        </div>
+
+        <div class="skill-category glass-card reveal-up">
+          <div class="skill-cat-head"><i class="fa-solid fa-cloud"></i><h3>Cloud Platforms</h3></div>
+          <div class="skill-bar-item"><div class="skill-bar-top"><span>Azure (Data Factory, Databricks)</span><span>90%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-top"><span>Azure SQL &amp; Key Vault</span><span>85%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-top"><span>AWS (S3, RDS)</span><span>75%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div></div>
+        </div>
+
+        <div class="skill-category glass-card reveal-up">
+          <div class="skill-cat-head"><i class="fa-solid fa-brain"></i><h3>Machine Learning &amp; AI</h3></div>
+          <div class="skill-bar-item"><div class="skill-bar-top"><span>NLP</span><span>85%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-top"><span>Deep Learning</span><span>80%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-top"><span>Statistical Analysis</span><span>83%</span></div><div class="skill-bar"><div class="skill-bar-fill" data-width="83"></div></div></div>
+        </div>
+      </div>
+
+      <div class="tech-marquee-wrap reveal-up">
+        <div class="tech-marquee">
+          <div class="tech-track">
+            <span><i class="fa-brands fa-python"></i>Python</span>
+            <span><i class="fa-solid fa-database"></i>SQL</span>
+            <span><i class="fa-brands fa-java"></i>Scala</span>
+            <span><i class="fa-brands fa-microsoft"></i>Azure</span>
+            <span><i class="fa-brands fa-aws"></i>AWS</span>
+            <span><i class="fa-solid fa-wind"></i>Airflow</span>
+            <span><i class="fa-brands fa-github"></i>GitHub Actions</span>
+            <span><i class="fa-solid fa-chart-column"></i>Power BI</span>
+            <span><i class="fa-solid fa-plug"></i>REST APIs</span>
+            <span><i class="fa-solid fa-server"></i>MySQL</span>
+            <span><i class="fa-solid fa-flask"></i>Flask</span>
+            <!-- duplicate for seamless loop -->
+            <span><i class="fa-brands fa-python"></i>Python</span>
+            <span><i class="fa-solid fa-database"></i>SQL</span>
+            <span><i class="fa-brands fa-java"></i>Scala</span>
+            <span><i class="fa-brands fa-microsoft"></i>Azure</span>
+            <span><i class="fa-brands fa-aws"></i>AWS</span>
+            <span><i class="fa-solid fa-wind"></i>Airflow</span>
+            <span><i class="fa-brands fa-github"></i>GitHub Actions</span>
+            <span><i class="fa-solid fa-chart-column"></i>Power BI</span>
+            <span><i class="fa-solid fa-plug"></i>REST APIs</span>
+            <span><i class="fa-solid fa-server"></i>MySQL</span>
+            <span><i class="fa-solid fa-flask"></i>Flask</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag reveal-line"><i class="fa-solid fa-briefcase"></i> 03 — Experience &amp; Education</span>
+        <h2 class="section-title reveal-line">My <span class="gradient-text">Journey</span></h2>
+      </div>
+
+      <div class="timeline" id="timeline">
+        <div class="timeline-line"><div class="timeline-progress" id="timelineProgress"></div></div>
+
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-date">Jan 2025 – Jun 2025</span>
+            <h3>Python Developer Intern</h3>
+            <p class="timeline-org"><i class="fa-solid fa-building"></i> Plumsoft</p>
+            <ul>
+              <li>Built Flask-based REST API services to expose model predictions, improving system reliability by <strong>20%</strong> and enabling dashboard integration.</li>
+              <li>Optimized data-serving API endpoints, reducing average response latency by <strong>25%</strong> and boosting throughput for production workloads.</li>
+              <li>Translated stakeholder requirements into functional software modules with a five-member engineering team, streamlining CI/CD workflows.</li>
+              <li>Contributed to cross-functional discussions on system design and deployment planning.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-date">Jun 2021 – Jul 2025</span>
+            <h3>B.Tech, Artificial Intelligence &amp; Data Science</h3>
+            <p class="timeline-org"><i class="fa-solid fa-graduation-cap"></i> VKR VNB &amp; AGK College of Engineering, Gudivada, AP</p>
+            <ul>
+              <li>Built a strong foundation in AI, machine learning, statistics, and data engineering fundamentals.</li>
+              <li>Applied classroom learning to production-style projects in healthcare analytics and NLP.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-date">2025</span>
+            <h3>Microsoft Certified: Azure Data Engineer Associate</h3>
+            <p class="timeline-org"><i class="fa-solid fa-certificate"></i> DP-203</p>
+            <ul><li>Validated expertise in designing and implementing data solutions on Microsoft Azure.</li></ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-date">2025</span>
+            <h3>Microsoft Certified: Azure Administrator Associate</h3>
+            <p class="timeline-org"><i class="fa-solid fa-certificate"></i> AZ-104</p>
+            <ul><li>Validated skills in managing Azure identities, storage, compute and networks.</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag reveal-line"><i class="fa-solid fa-rocket"></i> 04 — Projects</span>
+        <h2 class="section-title reveal-line">Selected <span class="gradient-text">Work</span></h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card glass-card" data-tilt>
+          <div class="project-image">
+            <div class="project-image-placeholder">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com/lakshmanasai5421/" target="_blank" rel="noopener" class="btn-icon magnetic" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+              <a href="#" class="btn-icon magnetic" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Data Engineering · Healthcare</span>
+            <h3>Intelligent Data Quality Assurance Platform</h3>
+            <p>An ETL data-quality platform on Azure Databricks &amp; Data Factory validating healthcare claims and patient records through null checks, schema validation, duplicate detection and referential integrity checks.</p>
+            <ul class="project-features">
+              <li><i class="fa-solid fa-check"></i> Rule-based anomaly detection with quarantine tables &amp; batch quality scores</li>
+              <li><i class="fa-solid fa-check"></i> Power BI dashboards for pipeline observability</li>
+              <li><i class="fa-solid fa-check"></i> Automated batch orchestration via Apache Airflow</li>
+            </ul>
+            <div class="project-stack">
+              <span>Azure Databricks</span><span>Azure Data Factory</span><span>Airflow</span><span>Power BI</span><span>SQL</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-card" data-tilt>
+          <div class="project-image">
+            <div class="project-image-placeholder">
+              <i class="fa-solid fa-comment-medical"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com/lakshmanasai5421/" target="_blank" rel="noopener" class="btn-icon magnetic" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+              <a href="#" class="btn-icon magnetic" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">NLP · AI Analytics</span>
+            <h3>CareTalk: AI Powered Patient Conversation Insights</h3>
+            <p>An NLP analytics pipeline powered by the Gemini API summarizing patient conversations into clinical abstracts and extracting structured intents like appointment requests, refills and symptoms.</p>
+            <ul class="project-features">
+              <li><i class="fa-solid fa-check"></i> Urgency signal detection to score and rank high-risk interactions</li>
+              <li><i class="fa-solid fa-check"></i> Automated alerts to a simulated care-team workflow</li>
+              <li><i class="fa-solid fa-check"></i> Power BI report for sentiment &amp; engagement trends</li>
+            </ul>
+            <div class="project-stack">
+              <span>Gemini API</span><span>NLP</span><span>Python</span><span>Power BI</span><span>SQL</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag reveal-line"><i class="fa-solid fa-toolbox"></i> 05 — Services</span>
+        <h2 class="section-title reveal-line">What I Can <span class="gradient-text">Deliver</span></h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card glass-card reveal-up" data-tilt>
+          <div class="service-icon"><i class="fa-solid fa-diagram-project"></i></div>
+          <h3>Data Pipeline Engineering</h3>
+          <p>Designing resilient ETL/ELT pipelines with schema validation, reconciliation and quality scoring on Azure &amp; AWS.</p>
+        </div>
+        <div class="service-card glass-card reveal-up" data-tilt>
+          <div class="service-icon"><i class="fa-solid fa-plug"></i></div>
+          <h3>REST API Development</h3>
+          <p>Building fast, reliable Flask-based APIs to serve ML predictions and analytical data to production systems.</p>
+        </div>
+        <div class="service-card glass-card reveal-up" data-tilt>
+          <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>Applied Machine Learning &amp; NLP</h3>
+          <p>Turning unstructured text and data into structured, actionable insight with NLP and statistical modeling.</p>
+        </div>
+        <div class="service-card glass-card reveal-up" data-tilt>
+          <div class="service-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+          <h3>Cloud Data Platforms</h3>
+          <p>Architecting and deploying data solutions across Azure Data Factory, Databricks, Key Vault, S3 and RDS.</p>
+        </div>
+        <div class="service-card glass-card reveal-up" data-tilt>
+          <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>BI &amp; Observability</h3>
+          <p>Building Power BI dashboards for pipeline health, sentiment trends and business-critical monitoring.</p>
+        </div>
+        <div class="service-card glass-card reveal-up" data-tilt>
+          <div class="service-icon"><i class="fa-solid fa-people-group"></i></div>
+          <h3>Cross-Functional Delivery</h3>
+          <p>Translating stakeholder requirements into shipped features while collaborating across engineering teams.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ACHIEVEMENTS / CERTIFICATIONS ===================== -->
+  <section class="section section-alt" id="achievements">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag reveal-line"><i class="fa-solid fa-trophy"></i> Achievements &amp; Certifications</span>
+        <h2 class="section-title reveal-line">Proof of <span class="gradient-text">Work</span></h2>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-card glass-card reveal-up" data-tilt>
+          <div class="cert-badge"><i class="fa-brands fa-microsoft"></i></div>
+          <h3>Azure Administrator Associate</h3>
+          <p>AZ-104 · Microsoft Certified</p>
+        </div>
+        <div class="cert-card glass-card reveal-up" data-tilt>
+          <div class="cert-badge"><i class="fa-brands fa-microsoft"></i></div>
+          <h3>Azure Data Engineer Associate</h3>
+          <p>DP-203 · Microsoft Certified</p>
+        </div>
+        <div class="cert-card glass-card reveal-up" data-tilt>
+          <div class="cert-badge"><i class="fa-solid fa-percent"></i></div>
+          <h3>+20% Reliability</h3>
+          <p>Delivered via Flask REST API services at Plumsoft</p>
+        </div>
+        <div class="cert-card glass-card reveal-up" data-tilt>
+          <div class="cert-badge"><i class="fa-solid fa-gauge-high"></i></div>
+          <h3>-25% Latency</h3>
+          <p>Achieved on optimized data-serving API endpoints</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag reveal-line"><i class="fa-solid fa-quote-left"></i> Testimonials</span>
+        <h2 class="section-title reveal-line">Kind <span class="gradient-text">Words</span></h2>
+      </div>
+
+      <div class="testimonial-slider">
+        <div class="testimonial-track" id="testimonialTrack">
+          <div class="testimonial-card glass-card">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <p>"Lakshmana consistently translated vague requirements into working modules, and his API optimizations had a real, measurable impact on our latency."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">EM</div>
+              <div><strong>Engineering Manager</strong><span>Plumsoft</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card glass-card">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <p>"His data quality platform caught issues our manual review process routinely missed — a genuinely production-ready piece of engineering."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">PL</div>
+              <div><strong>Project Lead</strong><span>Healthcare Analytics Team</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card glass-card">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <p>"A fast learner who pairs strong fundamentals in ML and data engineering with genuine curiosity about the systems he's building."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">FC</div>
+              <div><strong>Faculty Mentor</strong><span>VKR VNB &amp; AGK College of Engineering</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-dots" id="testimonialDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag reveal-line"><i class="fa-solid fa-tower-broadcast"></i> 06 — Contact</span>
+        <h2 class="section-title reveal-line">Let's Build Something <span class="gradient-text">Great</span></h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-up">
+          <p class="contact-lead">Open to full-time roles, internships and collaborations in AI, data engineering and backend development. Reach out — I usually reply within a day.</p>
+
+          <div class="contact-detail"><i class="fa-solid fa-envelope"></i><div><span>Email</span><a href="mailto:lakshmanasai21@gmail.com">lakshmanasai21@gmail.com</a></div></div>
+          <div class="contact-detail"><i class="fa-solid fa-phone"></i><div><span>Phone</span><a href="tel:+919398175790">+91 9398175790</a></div></div>
+          <div class="contact-detail"><i class="fa-solid fa-location-dot"></i><div><span>Location</span><p>Gudivada, Andhra Pradesh, India</p></div></div>
+          <div class="contact-detail"><i class="fa-brands fa-linkedin-in"></i><div><span>LinkedIn</span><a href="https://linkedin.com/in/lakshmana-sai-/" target="_blank" rel="noopener">linkedin.com/in/lakshmana-sai-</a></div></div>
+          <div class="contact-detail"><i class="fa-brands fa-github"></i><div><span>GitHub</span><a href="https://github.com/lakshmanasai5421/" target="_blank" rel="noopener">github.com/lakshmanasai5421</a></div></div>
+
+          <div class="contact-socials">
+            <a href="https://github.com/lakshmanasai5421/" target="_blank" rel="noopener" class="social-icon magnetic"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/lakshmana-sai-/" target="_blank" rel="noopener" class="social-icon magnetic"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:lakshmanasai21@gmail.com" class="social-icon magnetic"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form glass-card reveal-up" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="cf-name" name="name" placeholder=" " required>
+              <label for="cf-name">Your Name</label>
+              <span class="form-error" data-for="cf-name">Please enter your name</span>
+            </div>
+            <div class="form-group">
+              <input type="email" id="cf-email" name="email" placeholder=" " required>
+              <label for="cf-email">Your Email</label>
+              <span class="form-error" data-for="cf-email">Please enter a valid email</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" id="cf-subject" name="subject" placeholder=" " required>
+            <label for="cf-subject">Subject</label>
+            <span class="form-error" data-for="cf-subject">Please enter a subject</span>
+          </div>
+          <div class="form-group">
+            <textarea id="cf-message" name="message" rows="5" placeholder=" " required></textarea>
+            <label for="cf-message">Your Message</label>
+            <span class="form-error" data-for="cf-message">Please enter a message (min 10 characters)</span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block magnetic">
+            <span>Send Message</span><i class="fa-solid fa-paper-plane"></i>
+          </button>
+          <p class="form-success" id="formSuccess"><i class="fa-solid fa-circle-check"></i> Message sent successfully! I'll get back to you soon.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#hero" class="logo magnetic"><span class="logo-bracket">&lt;</span>KLS<span class="logo-bracket">/&gt;</span></a>
+      <p>AI &amp; Data Science engineer crafting reliable pipelines, APIs, and intelligent systems.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Navigate</h4>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-links">
+      <h4>Connect</h4>
+      <a href="https://github.com/lakshmanasai5421/" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/lakshmana-sai-/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:lakshmanasai21@gmail.com">Email</a>
+      <a href="tel:+919398175790">Phone</a>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    <p>&copy; <span id="year"></span> Karumuri Lakshmana Sai. All rights reserved.</p>
+    <p class="footer-signature">Designed &amp; built with <i class="fa-solid fa-heart"></i> and a lot of shaders.</p>
+  </div>
+</footer>
+
+<!-- ===================== BACK TO TOP ===================== -->
+<button id="backToTop" class="back-to-top magnetic" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- ===================== SCRIPTS ===================== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/three-scene.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

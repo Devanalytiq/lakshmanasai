@@ -1,0 +1,120 @@
+/* ============================================================
+   ANIMATIONS — keyframes & scroll-reveal states
+   ============================================================ */
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@keyframes scrollMove {
+  0% { top: 0; opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { top: 38px; opacity: 0; }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes dotsBlink {
+  0%, 20% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ---------- Scroll Reveal Base States ---------- */
+.reveal-line, .reveal-word, .reveal-up {
+  opacity: 0;
+}
+
+.reveal-line {
+  transform: translateY(24px);
+}
+.reveal-line.in-view {
+  animation: fadeUp 0.9s var(--ease) forwards;
+}
+
+.reveal-word {
+  display: inline-block;
+  transform: translateY(60%) rotate(4deg);
+}
+.reveal-word.in-view {
+  animation: wordReveal 0.9s var(--ease) forwards;
+}
+
+.reveal-up {
+  transform: translateY(40px);
+}
+.reveal-up.in-view {
+  animation: fadeUp 0.8s var(--ease) forwards;
+}
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes wordReveal {
+  to { opacity: 1; transform: translateY(0) rotate(0); }
+}
+
+/* Stagger helper applied via inline style / JS nth-child delay */
+.reveal-line:nth-of-type(1) { animation-delay: 0s; }
+
+.dots::after {
+  content: "...";
+  animation: dotsBlink 1.4s infinite;
+}
+
+/* Typewriter caret already animated via .caret in style.css */
+
+/* Magnetic buttons get transform via JS but keep smooth return */
+.magnetic {
+  transition: transform 0.35s var(--ease);
+  will-change: transform;
+}
+
+/* Tilt cards smooth return */
+[data-tilt] {
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+  will-change: transform;
+}
+
+/* Nav mobile transitions */
+.nav-links a { position: relative; }
+
+/* Page fade-in on load */
+body.loaded main, body.loaded .site-header, body.loaded .site-footer {
+  animation: pageFade 0.6s var(--ease) both;
+}
+@keyframes pageFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Glow pulse for orbit core */
+.orbit-core {
+  animation: corePulse 3s ease-in-out infinite;
+}
+@keyframes corePulse {
+  0%, 100% { box-shadow: 0 0 40px rgba(0,240,255,0.35); }
+  50% { box-shadow: 0 0 65px rgba(168,85,255,0.5); }
+}

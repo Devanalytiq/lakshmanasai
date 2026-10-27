@@ -1,0 +1,22 @@
+{
+  "name": "Karumuri Lakshmana Sai | AI & Data Engineer Portfolio",
+  "short_name": "K. Lakshmana Sai",
+  "description": "Portfolio of Karumuri Lakshmana Sai — AI & Data Science engineer specializing in ETL pipelines, REST APIs and machine learning.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#05060a",
+  "theme_color": "#05060a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/images/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "assets/images/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

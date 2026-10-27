@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05060a"/>
+      <stop offset="100%" stop-color="#0e1220"/>
+    </linearGradient>
+    <linearGradient id="txt" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="55%" stop-color="#a855ff"/>
+      <stop offset="100%" stop-color="#ff2fb0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1000" cy="80" r="220" fill="#a855ff" opacity="0.15"/>
+  <circle cx="120" cy="560" r="200" fill="#00f0ff" opacity="0.12"/>
+  <text x="90" y="300" font-family="Arial, sans-serif" font-weight="800" font-size="72" fill="#eef1fb">Karumuri</text>
+  <text x="90" y="380" font-family="Arial, sans-serif" font-weight="800" font-size="72" fill="url(#txt)">Lakshmana Sai</text>
+  <text x="90" y="440" font-family="Arial, sans-serif" font-weight="500" font-size="30" fill="#9aa3c0">AI &amp; Data Science Engineer · Python · Azure · ML</text>
+</svg>
